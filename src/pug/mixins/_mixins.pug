@@ -1,0 +1,32 @@
+mixin head-meta(title, description, href)
+	title=title
+	meta(name="description" content=description)
+	link(rel="canonical" href=href)
+
+	
+mixin button-name(name="Lorem")
+	a(href="javascript:void(0);").custom-btn
+		span= name
+		svg#button(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 36.1 25.8', enable-background='new 0 0 36.1 25.8', xml:space='preserve')
+			g
+				polyline(fill='none', stroke='#FFFFFF', stroke-width='3', stroke-miterlimit='10', points='22.2,1.1 34,12.9 22.2,24.7')
+
+mixin submit-name(name="Lorem")
+	button(type="submit", role="button").custom-btn
+		span= name
+		svg#submit(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 36.1 25.8', enable-background='new 0 0 36.1 25.8', xml:space='preserve')
+			g
+				polyline(fill='none', stroke='#FFFFFF', stroke-width='3', stroke-miterlimit='10', points='22.2,1.1 34,12.9 22.2,24.7')
+
+mixin feedback-button(name="Lorem")
+	a(href="javascript:void(0);").custom-btn#feedbackModalTrigger
+		span= name
+		svg#button(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 36.1 25.8', enable-background='new 0 0 36.1 25.8', xml:space='preserve')
+			g
+				polyline(fill='none', stroke='#FFFFFF', stroke-width='3', stroke-miterlimit='10', points='22.2,1.1 34,12.9 22.2,24.7')
+
+mixin feedback-block-headline(name="Lorem")
+	h2.page-headline.ta-c= name
+
+mixin feedback-block-content(name="Lorem")
+	p= name

@@ -1,0 +1,190 @@
+/**
+	Style Sheet for Verum Trade website project
+	version: 1.0
+	created: 12.11.2018
+	author: Serhii Tiutin
+	website: https://verumtrade.com
+	*/
+
+@import "vars"
+
+/**
+	Custom button styles
+	*/
+
+.custom-btn
+	color: $white-color
+	border: none
+	font-size: 16px
+	font-family: $regular-font
+	background-image: -moz-linear-gradient( 0deg, $accent-blue-color 0%, $lighter-blue-color 100%)
+	background-image: -webkit-linear-gradient( 0deg, $accent-blue-color 0%, $lighter-blue-color 100%)
+	background-image: -ms-linear-gradient( 0deg, $accent-blue-color 0%, $lighter-blue-color 100%)
+	line-height: 55px
+	padding: 0
+	transition: color 0.1s cubic-bezier(0.16, 0.08, 0.355, 1), background 0.1s cubic-bezier(0.16, 0.08, 0.355, 1)
+	display: inline-block
+	cursor: pointer
+	width: 100%
+	max-width: 200px
+	outline: none
+	vertical-align: middle
+	text-align: center
+	position: relative
+	overflow: hidden
+	border-radius: 5px
+	&:hover
+		background-image: -moz-linear-gradient( 0deg, $accent-blue-color 0%, $lighter-blue-color 100%)
+		background-image: -webkit-linear-gradient( 0deg, $accent-blue-color 0%, $lighter-blue-color 100%)
+		background-image: -ms-linear-gradient( 0deg, $accent-blue-color 0%, $lighter-blue-color 100%)
+		color: $white-color
+		text-decoration: none
+	&:focus,
+	&:active
+		outline: none
+		box-shadow: none
+	span
+		display: inline-block
+		position: relative
+		transition: all 500ms ease-out
+		will-change: transform
+	&:hover
+		span
+			transform: translate3d(-1rem, 0, 0)
+	svg
+		position: absolute
+		width: 1.1em
+		right: 0px
+		opacity: 0
+		top: 50%
+		transform: translateY(-50%)
+		transition: all 500ms ease-out
+		will-change: right, opacity
+		stroke-width: 5
+		stroke-color: transparent
+	&:hover
+		svg
+			opacity: 1
+			right: 2rem
+
+/**
+	Secondary button
+	*/
+
+.secondary-btn
+	border-radius: 5px
+	background-color: #e1ecfe
+	width: 200px
+	line-height: 55px
+	color: $accent-blue-color
+	font-size: 16px
+	font-family: $bold-font
+	display: inline-block
+	cursor: pointer
+	padding: 0
+	width: 100%
+	max-width: 200px
+	outline: none
+	vertical-align: middle
+	text-align: center
+	position: relative
+	overflow: hidden
+	&:focus,
+	&:active
+		outline: none
+		box-shadow: none
+	span
+		display: inline-block
+		position: relative
+		transition: all 500ms ease-out
+		will-change: transform
+	&:hover
+		span
+			transform: translate3d(-1rem, 0, 0)
+			color: $accent-blue-color
+	svg
+		position: absolute
+		width: 1.1em
+		right: 0px
+		opacity: 0
+		top: 50%
+		transform: translateY(-50%)
+		transition: all 500ms ease-out
+		will-change: right, opacity
+		stroke-width: 5
+		stroke-color: transparent
+		color: $accent-blue-color
+	&:hover
+		svg
+			opacity: 1
+			right: 2rem
+
+/**
+	Pulse button
+	*/
+
+@keyframes shadow-pulse
+	0%
+		box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2)
+	100%
+		box-shadow: 0 0 0 35px rgba(0, 0, 0, 0)
+
+.pulse
+	position: absolute
+	top: 50px
+	left: 0
+	font-family: sans-serif
+	font-weight: 700
+	font-size: 34px
+	text-align: center
+	color: $white-color
+	border-radius: 50%
+	background-image: -moz-linear-gradient( 0deg, $lighter-blue-color 0%, $accent-blue-color 100%)
+	background-image: -webkit-linear-gradient( 0deg, $lighter-blue-color 0%, $accent-blue-color 100%)
+	background-image: -ms-linear-gradient( 0deg, $lighter-blue-color 0%, $accent-blue-color 100%)
+	width: 89px
+	height: 89px
+	display: block
+	span,
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		border: 0 solid $accent-blue-color
+		border-radius: 100%
+		animation: da-pulse 1.5s ease-in-out 0s infinite
+	span
+		border-color: $accent-blue-color
+		border-width: 4px
+		top: 8px
+		left: 8px
+		right: 8px
+		bottom: 8px
+	&:before
+		border-color: $accent-blue-color
+		border-width: 1px
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+	&:after
+		border-color: $accent-blue-color
+		border-width: 1px
+		top: -10px
+		left: -10px
+		right: -10px
+		bottom: -10px
+
+@keyframes da-pulse
+	0%,
+	100%
+		transform: scale(1.4)
+		opacity: 0
+	48%,
+	52%
+		transform: scale(1)
+		opacity: 1

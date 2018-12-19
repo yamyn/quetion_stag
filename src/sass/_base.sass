@@ -1,0 +1,415 @@
+/**
+	Style Sheet for Verum Trade website project
+	version: 1.0
+	created: 12.11.2018
+	author: Serhii Tiutin
+	website: https://verumtrade.com
+	*/
+
+@import "vars"
+@import "buttons"
+@import "feedback-modal"
+@import "investor-modal"
+@import "photo-video-modal"
+
+/**
+	Basic normalize
+	*/
+
+@media (min-width: 1220px)
+	.container
+		max-width: 1220px
+		padding: 0px
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, a, figure
+	padding: 0
+	margin: 0
+
+ul, ol, dl
+	list-style-type: none
+
+.ta-c
+	text-align: center!important
+
+.dropdown-toggle
+	&:after
+		display: none
+	.zmdi-chevron-down
+		display: inline-block
+		padding-left: 10px
+		font-weight: 700
+		width: 22px
+
+/**
+	Headline typography styles
+	*/
+
+.pre-headline
+	font-size: 16px
+	font-family: $regular-font
+	color: $dim-gray-color
+	line-height: 1.2
+	position: relative
+	text-align: center
+	&:before
+		position: absolute
+		display: block
+		content: ""
+		background-color: #366bf5
+		width: 48px
+		height: 2px
+		top: -20px
+		left: 50%
+		transform: translateX(-50%)
+
+.page-headline
+	font-size: 50px
+	font-family: $bold-font
+	color: $light-black-color
+	line-height: 1.2
+	text-align: left
+	padding: 23px 0 40px
+
+/**
+	Basic table styles
+	*/
+
+table
+	width: 100%
+	border-radius: 5px
+	box-shadow: 0px 10px 80px rgba(0,0,0,0.1)
+	background-color: $white-color
+	margin-left: 6px
+	thead
+		tr
+			th
+				font-size: 18px
+				font-family: $bold-font
+				color: $white-color
+				line-height: 71px
+				text-align: center
+				border-top-left-radius: 3px
+				border-top-right-radius: 3px
+		&.blue-thead
+			background-image: -moz-linear-gradient(90deg, $accent-blue-color 0%, $lighter-blue-color 100%)
+			background-image: -webkit-linear-gradient(90deg, $accent-blue-color 0%, $lighter-blue-color 100%)
+			background-image: -ms-linear-gradient(90deg, $accent-blue-color 0%, $lighter-blue-color 100%)
+		&.green-thead
+			background-image: -moz-linear-gradient(90deg, $accent-green-color 0%, $lighter-green-color 100%)
+			background-image: -webkit-linear-gradient(90deg, $accent-green-color 0%, $lighter-green-color 100%)
+			background-image: -ms-linear-gradient(90deg, $accent-green-color 0%, $lighter-green-color 100%)
+	tbody
+		border: 1px solid $honey-dew-color
+		text-align: center
+		font-size: 18px
+		font-family: $regular-font
+		tr
+			td
+				line-height: 62px
+				border-bottom: 1px solid $honey-dew-color
+				span
+					position: relative
+			&:last-child
+				td
+					border-bottom: none
+
+
+/**
+	Feedback block styles
+	*/
+
+.feedback-block
+	width: 100%
+	max-width: 790px
+	height: 416px
+	background-color: $violet-color
+	margin: 0 auto
+	border-radius: 5px
+	text-align: center
+	padding-top: 90px
+	margin-bottom: 50px
+	position: relative
+	.pre-headline
+		color: $white-color
+	.page-headline
+		color: $white-color
+		padding-top: 12px
+		padding-bottom: 19px
+	p
+		color: $white-color
+		font-family: $regular-font
+		font-size: 18px
+		padding-left: 9px
+	&:after
+		position: absolute
+		top: -65px
+		left: -200px
+		display: block
+		content: ''
+		background-image: url(../images/pattern-3.png)
+		background-repeat: no-repeat
+		background-size: contain
+		width: 1178px
+		height: 368px
+		margin: 0 auto
+		z-index: -1
+
+/**
+	Tooltip styles
+	*/
+
+.default-tooltip
+	display: inline-block
+	position: relative
+	color: #5e94ff
+	&:hover
+		text-decoration: none
+		color: #5e94ff
+	.tooltip-wave
+		width: 100%
+		height: 20px
+		position: absolute
+		bottom: -15px
+		left: 0
+		overflow: hidden
+		span 
+			position: absolute
+			left: -100%
+			width: 200%
+			height: 100%
+			background: url(../images/dotted-line.png) repeat-x center center
+			background-size: 50% auto
+
+/**
+	Home page first screen keyframe
+	*/
+
+@keyframes fadeIn
+	from
+		opacity: 0
+	to
+		opacity: 1
+
+/**
+	Scroll to top from footer keyframe
+	*/
+
+@keyframes toTop
+	from
+		opacity: 0
+		top: 60px
+	to
+		opacity: 1
+		top: 30px
+
+/**
+	Scroll to home page second screen from its first screen
+	*/
+
+@keyframes toBottom
+	from
+		opacity: 0
+		top: -93px
+	to
+		opacity: 1
+		top: 0px
+
+/**
+	Home page first screen animation delay styles 
+	*/
+
+#first
+	animation-delay: 0.1s
+
+#second
+	animation-delay: 0.2s
+
+#third
+	animation-delay: 0.3s
+
+#fourth
+	animation-delay: 0.4s
+
+#fifth
+	animation-delay: 0.5s
+
+#sixth
+	animation-delay: 0.5s
+
+#seventh
+	animation-delay: 0.5s
+
+#eighth
+	animation-delay: 0.5s
+
+#nineth
+	animation-delay: 0s
+
+#tenth
+	animation-delay: 0s
+
+#scrollBottom
+	animation-delay: 0.5s
+	position: relative
+	z-index: 99999
+	width: 100%
+	margin-top: 150px
+	margin-left: 15px
+	cursor: pointer
+	img
+		width: 42px
+		cursor: pointer
+	span
+		font-size: 16px
+		font-family: $regular-font
+		color: #6469ae
+		line-height: 42px
+		display: inline-block
+		padding-left: 15px
+
+.fadeInAnimated 
+	opacity: 0
+	animation: fadeIn 0.7s forwards
+
+.toTopAnimated
+	opacity: 0
+	animation: toTop 0.7s forwards
+
+.toBottomAnimated
+	opacity: 0
+	animation: toBottom 0.7s forwards
+
+/**
+	Hidden input / textarea placeholders on focus
+	*/
+
+input[type=text]:focus::-webkit-input-placeholder,
+input[type=email]:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder
+	color: transparent
+
+input[type=text]:focus::-webkit-input-placeholder,
+input[type=email]:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder
+	color: transparent
+
+input[type=text]:focus:-moz-placeholder,
+input[type=email]:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder
+	color: transparent
+
+input[type=text]:focus::-moz-placeholder,
+input[type=email]:focus::-moz-placeholder,
+textarea:focus:-moz-placeholder
+	color: transparent
+
+input[type=text]:focus:-ms-input-placeholder,
+input[type=email]:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder
+	color: transparent
+
+input[type=text]::focus,
+input[type=email]::focus,
+textarea::focus
+	outline: 0
+	label
+		display: none
+
+/**
+	Calculator input range styles
+	*/
+
+input[type=range]
+	height: 16px
+	-webkit-appearance: none
+	margin: 10px 0
+	width: 100%
+	&:focus
+		outline: none
+	&::-webkit-slider-runnable-track
+		width: 100%
+		height: 4px
+		cursor: pointer
+		animate: 0.2s
+		box-shadow: 0px 0px 0px $black-color
+		background: $accent-blue-color
+		border-radius: 25px
+		border: 1px solid $accent-blue-color
+	&::-webkit-slider-thumb
+		box-shadow: 1px 1px 1px $accent-blue-color
+		border: 1px solid $accent-blue-color
+		height: 20px
+		width: 22px
+		border-radius: 3px
+		background: $accent-blue-color
+		cursor: pointer
+		-webkit-appearance: none
+		margin-top: -10px
+	&:focus::-webkit-slider-runnable-track
+		background: $accent-blue-color
+	&::-moz-range-track
+		width: 100%
+		height: 4px
+		cursor: pointer
+		animate: 0.2s
+		box-shadow: 0px 0px 0px $black-color
+		background: $accent-blue-color
+		border-radius: 25px
+		border: 1px solid $accent-blue-color
+	&::-moz-range-thumb
+		box-shadow: 1px 1px 1px $accent-blue-color
+		border: 1px solid $accent-blue-color
+		height: 20px
+		width: 22px
+		border-radius: 4px
+		background: $accent-blue-color
+		cursor: pointer
+	&::-ms-track
+		width: 100%
+		height: 4px
+		cursor: pointer
+		animate: 0.2s
+		background: $accent-blue-color
+		border-color: transparent
+		color: $accent-blue-color
+	&::-ms-fill-lower, &::-ms-fill-upper
+		background: $accent-blue-color
+		border: 1px solid $accent-blue-color
+		border-radius: 50px
+		box-shadow: 0px 0px 0px $black-color
+	&::-ms-thumb
+		margin-top: 1px
+		box-shadow: 1px 1px 1px $accent-blue-color
+		border: 1px solid $accent-blue-color
+		height: 40px
+		width: 35px
+		border-radius: 6px
+		background: $accent-blue-color
+		cursor: pointer
+	&:focus
+		&::-ms-fill-lower, &::-ms-fill-upper
+			background: $accent-blue-color
+
+
+
+.error-input
+	width: 100%
+	max-width: 226.5px
+	height: 53px
+	border: 1px solid #366bf5
+	border-radius: 5px
+	position: absolute
+	bottom: 0
+	pointer-events: none
+	opacity: 0
+
+.error-textarea
+	width: 100%
+	max-width: 463px
+	height: 104px
+	border: 1px solid #366bf5
+	border-radius: 5px
+	position: absolute
+	bottom: 0
+	pointer-events: none
+	opacity: 0

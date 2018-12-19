@@ -1,0 +1,116 @@
+include ../mixins/_mixins
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+		block head-meta
+		include ../includes/_favicons
+		link(rel="stylesheet", href="css/hamburgers.css")
+		link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css")
+	body
+		block header
+		block main-content
+		footer.top-footer
+			.container
+				.row.footer-menu
+					.col-lg-2.footer-menu-col.footer-menu-col-1
+						a(href="/")
+							img(src="images/logo.png", alt="logo", style="width: 40px; height: 40px;")
+					.col-lg-3.col-sm-6.footer-menu-col.footer-menu-col-2
+						p.footer-menu-title Меню
+						ul.footer-menu-list
+							li
+								a(href="/") Главная страница
+							li
+								a(href="company.html") О VerumTrade
+							li
+								a(href="faq.html") Часто задаваемые вопросы
+							li
+								a(href="contacts.html") Контакты
+					.col-lg-2.col-sm-6.footer-menu-col.footer-menu-col-3
+						p.footer-menu-title Инфоцентр
+						ul.footer-menu-list
+							li
+								a(href="event.html") События
+							li
+								a(href="javascript:void(0);") Новости
+							li
+								a(href="javascript:void(0);") Отзывы
+							li
+								a(href="gallery.html") Галерея
+					.col-lg-3.col-sm-6.footer-menu-col.footer-menu-col-4
+						p.footer-menu-title Контакты
+						ul.footer-menu-list
+							li
+								p Dublin, Ireland
+							li
+								p 110, Upper Tulse Hill
+							li
+								p Тел. 
+									|
+									a(href="tel:+12248175906") +1 (224) 817-59-06
+							li
+								a(href="mailto:support@verumtrade.com") support@verumtrade.com
+					.col-lg-2.col-sm-6.footer-menu-col.footer-menu-col-5
+						p.footer-menu-title Соцсети
+						ul.footer-menu-list
+							li
+								a(href="https://www.facebook.com/profile.php?id=100018532218598", target="_blank").facebook-icon
+									.icon-wrapper
+										i.zmdi.zmdi-facebook
+									span Facebook
+							li
+								a(href="https://twitter.com/Verumtrade", target="_blank").twitter-icon
+									.icon-wrapper
+										i.zmdi.zmdi-twitter
+									span Twitter
+							li
+								a(href="http://www.youtube.com/channel/UCueR6-HaSgC2Ee1h4r61cKQ", target="blank").youtube-icon
+									.icon-wrapper
+										i.zmdi.zmdi-youtube
+									span Youtube
+							li
+								a(href="http://www.instagram.com/verum_trade/", target="_blank").instagram-icon
+									.icon-wrapper
+										i.zmdi.zmdi-instagram
+									span Instagram
+		footer.bottom-footer
+			.container
+				.row
+					.col-lg-5.col-md-4
+						p Все права защищены &copy; VerumTrade - 2018
+					.col-lg-2.col-md-4.text-center#scroll-top-wrapper
+						a(href="javascript:void(0);")#scrollTop
+							| Вверх сайта  
+							i.zmdi.zmdi-chevron-up.scroll-top-icon
+					.col-lg-5.col-md-4.text-right
+						a(href="javascript:void(0);") Политика конфиденциальности
+				.row
+					.col.text-center.footer-lang-switcher
+						a(href="javascript:void(0);") RUS
+						a(href="javascript:void(0);") ENG
+		block feedback-modal
+		block investor-modal
+		.mobile-menu#mobile-menu
+			button.hamburger.hamburger--spin.closebtn.is-active(type="button", onclick="closeMobileMenu()")
+				span.hamburger-box
+					span.hamburger-inner
+			.overlay-content
+				a(href="/") Главная
+				a(href="company.html") О компании
+				a(href="faq.html") FAQ
+				a(href="contacts.html") Контакты
+				a(href="https://backoffice.verumtrade.com/sign_in") Войти
+				a(href="https://backoffice.verumtrade.com/sign_up") Регистрация
+		link(rel="stylesheet", href="css/main.min.css")
+		script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js")
+		script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js")
+		script(src="https://tympanus.net/Development/ProximityFeedback/js/TweenMax.min.js")
+		script(src="https://tympanus.net/Development/ProximityFeedback/js/nearby.js")
+		script(src="https://tympanus.net/Development/ProximityFeedback/js/charming.min.js")
+		block extra-js
+		script(src="js/common.js")

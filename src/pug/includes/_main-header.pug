@@ -1,0 +1,40 @@
+header.header.home-page-header
+	.container
+		nav.navbar.navbar-expand-xl.toBottomAnimated#tenth
+			a.brand(href="/")
+				img(src="./images/home-page-logo.png", alt="logo", style="width: 40px; height: 40px;").d-inline-block.align-top
+				span VerumTrade
+			#navbarNavDropdown.collapse.navbar-collapse.main-menu
+				ul.navbar-nav
+					li.nav-item.default-nav-item.lang-item.dropdown
+						a#navbarLangSwitcher.nav-link.dropdown-toggle(href="javascript:void(0);", role="button" data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+							span RUS
+							i.zmdi.zmdi-chevron-down
+						.dropdown-menu
+							a.dropdown-item(href="javascript:void(0);") ENG
+					li.nav-item.default-nav-item.active
+						a.nav-link(href='/') Главная
+					li.nav-item.default-nav-item
+						a.nav-link(href='company.html') О компании
+					li.nav-item.default-nav-item
+						a.nav-link(href='faq.html') FAQ
+					li.nav-item.default-nav-item.dropdown
+						a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='javascript:void(0);', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							| Инфоцентр
+							i.zmdi.zmdi-chevron-down
+						.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+							a.dropdown-item(href='marketing.html') Ранги и премии
+							a.dropdown-item(href='events.html') События
+							a.dropdown-item(href='javascript:void(0);') Конференции
+					li.nav-item.default-nav-item
+						a.nav-link(href='contacts.html') Контакты
+					li.nav-item.special-nav-item
+						a.nav-link(href='https://backoffice.verumtrade.com/sign_in')
+							i.zmdi.zmdi-lock
+							span Войти
+						a.nav-link(href='https://backoffice.verumtrade.com/sign_up')
+							i.zmdi.zmdi-account-add
+							span Регистрация
+			button.hamburger.hamburger--spin#hamburger(type="button", onclick="openMobileMenu()")
+				span.hamburger-box
+					span.hamburger-inner

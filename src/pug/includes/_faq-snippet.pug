@@ -1,0 +1,118 @@
+.faq-page-wrapper
+	h6.pre-headline Часто задаваемые вопросы
+	h1.page-headline.ta-c Отвечаем на ваши 
+		br
+		| часто задаваемые вопросы
+	#faq-tabs.nav.nav-pills.faq-nav(role='tablist', aria-orientation='vertical')
+		a.nav-link.active(href='#tab1', data-toggle='pill', role='tab', aria-controls='tab1', aria-selected='true')
+			i.mdi.mdi-help-circle
+			|  Регистрация
+		a.nav-link(href='#tab2', data-toggle='pill', role='tab', aria-controls='tab2', aria-selected='false')
+			i.mdi.mdi-account
+			|  Финансы
+		a.nav-link(href='#tab3', data-toggle='pill', role='tab', aria-controls='tab3', aria-selected='false')
+			i.mdi.mdi-account-settings
+			|  Безопасность
+	#faq-tab-content.tab-content
+		#tab1.tab-pane.show.active(role='tabpanel', aria-labelledby='tab1')
+			#accordion-tab-1.accordion
+				.card
+					#accordion-tab-1-heading-1.card-header
+						a(data-toggle='collapse', data-target='#accordion-tab-1-content-1', aria-expanded='false', aria-controls='accordion-tab-1-content-1').collapsed
+							span Как зарегистрироваться на сайте компании VerumTrade для дальнейшей работы?
+					#accordion-tab-1-content-1.collapse(aria-labelledby='accordion-tab-1-heading-1', data-parent='#accordion-tab-1')
+						.card-body
+							p Для начала работы в компании VerumTrade необходимо зарегистрироваться по ссылке уже действующего партнера или подать заявку на регистрацию. Оставьте ваш адрес электронной почты на сайте компании и мы обязательно с вами свяжемся.
+				.card
+					#accordion-tab-1-heading-2.card-header
+						a(data-toggle='collapse', data-target='#accordion-tab-1-content-2', aria-expanded='false', aria-controls='accordion-tab-1-content-2').collapsed
+							span В какой валюте можно сделать 
+								br
+								|инвестицию?
+					#accordion-tab-1-content-2.collapse(aria-labelledby='accordion-tab-1-heading-2', data-parent='#accordion-tab-1')
+						.card-body
+							p Компания принимает инвестиции в любой валюте через visa/mastercard или через криптовалюту.
+				.card
+					#accordion-tab-1-heading-3.card-header
+						a(data-toggle='collapse', data-target='#accordion-tab-1-content-3', aria-expanded='false', aria-controls='accordion-tab-1-content-3').collapsed
+							span Какой минимальный и максимальный размер инвестиций в компанию VerumTrade?
+					#accordion-tab-1-content-3.collapse(aria-labelledby='accordion-tab-1-heading-3', data-parent='#accordion-tab-1')
+						.card-body
+							p Минимальная инвестиция в компании равна эквиваленту 10 долларов, а максимальная — 50 000 долларов.
+				.card
+					#accordion-tab-1-heading-4.card-header
+						a(data-toggle='collapse', data-target='#accordion-tab-1-content-4', aria-expanded='false', aria-controls='accordion-tab-1-content-4').collapsed
+							span Когда начисляются и выплачиваются проценты по инвестициям?
+					#accordion-tab-1-content-4.collapse(aria-labelledby='accordion-tab-1-heading-4', data-parent='#accordion-tab-1')
+						.card-body
+							p Процент по инвестиции начисляется каждые 30 дней (раз в месяц) или ежедневно - это зависит от выбранного пакета инвестиций. Вывод доступен сразу после их начисления.
+				.card
+					#accordion-tab-1-heading-5.card-header
+						a(data-toggle='collapse', data-target='#accordion-tab-1-content-5', aria-expanded='false', aria-controls='accordion-tab-1-content-5').collapsed
+							span Кто может зарегистрироваться и начать работу с VerumTrade?
+					#accordion-tab-1-content-5.collapse(aria-labelledby='accordion-tab-1-heading-5', data-parent='#accordion-tab-1')
+						.card-body
+							p Регистрация доступна особам, достигшим совершеннолетия.
+		#tab2.tab-pane(role='tabpanel', aria-labelledby='tab2')
+			#accordion-tab-2.accordion
+				.card
+					#accordion-tab-2-heading-1.card-header
+						a(data-toggle='collapse', data-target='#accordion-tab-2-content-1', aria-expanded='false', aria-controls='accordion-tab-2-content-1').collapsed
+							span Как быстро осуществляется 
+								br
+								| вывод средств?
+					#accordion-tab-2-content-1.collapse(aria-labelledby='accordion-tab-2-heading-1', data-parent='#accordion-tab-2')
+						.card-body
+							p Регламент на вывод — 72 часа с момента подачи заявки.
+				.card
+					#accordion-tab-2-heading-2.card-header
+						a(data-toggle='collapse', data-target='#accordion-tab-2-content-2', aria-expanded='false', aria-controls='accordion-tab-2-content-2').collapsed
+							span Возможно ли досрочно 
+							br
+							| снять депозит?
+					#accordion-tab-2-content-2.collapse(aria-labelledby='accordion-tab-2-heading-2', data-parent='#accordion-tab-2')
+						.card-body
+							p Досрочное снятие депозита не предусмотрено.
+				.card
+					#accordion-tab-2-heading-3.card-header
+						a(data-toggle='collapse', data-target='#accordion-tab-2-content-3', aria-expanded='false', aria-controls='accordion-tab-2-content-3').collapsed
+							span Какова сумма минимального 
+								br
+								| вывода средств?
+					#accordion-tab-2-content-3.collapse(aria-labelledby='accordion-tab-2-heading-3', data-parent='#accordion-tab-2')
+						.card-body
+							p Минимальная сумма для вывода средств равняется эквиваленту 10 долларов.
+				.card
+					#accordion-tab-2-heading-4.card-header
+						a(data-toggle='collapse', data-target='#accordion-tab-2-content-4', aria-expanded='false', aria-controls='accordion-tab-2-content-4').collapsed
+							span Какие условия для участия в 
+								br
+								| реферальной программе?
+					#accordion-tab-2-content-4.collapse(aria-labelledby='accordion-tab-2-heading-4', data-parent='#accordion-tab-2')
+						.card-body
+							p Для участие в реферальной программе необходимо наличие минимальной инвестиции (эквивалент 10 долларов).
+				.card
+					#accordion-tab-2-heading-5.card-header
+						a(data-toggle='collapse', data-target='#accordion-tab-2-content-5', aria-expanded='false', aria-controls='accordion-tab-2-content-5').collapsed
+							span Какой процент за ввод и 
+								br
+								| вывод средств?
+					#accordion-tab-2-content-5.collapse(aria-labelledby='accordion-tab-2-heading-5', data-parent='#accordion-tab-2')
+						.card-body
+							p Процент за ввод и вывод средств составляет 0.5 % от суммы.
+		#tab3.tab-pane(role='tabpanel', aria-labelledby='tab3')
+			#accordion-tab-3.accordion
+				.card
+					#accordion-tab-3-heading-1.card-header
+						a(data-toggle='collapse', data-target='#accordion-tab-3-content-1', aria-expanded='false', aria-controls='accordion-tab-3-content-1').collapsed
+							span Что делать, если забыл или потерял пароль?
+					#accordion-tab-3-content-1.collapse(aria-labelledby='accordion-tab-3-heading-1', data-parent='#accordion-tab-3')
+						.card-body
+							p Перейдите, пожалуйста, по ссылке «забыл пароль» и далее следуйте простым инструкциям.
+				.card
+					#accordion-tab-3-heading-2.card-header
+						a(data-toggle='collapse', data-target='#accordion-tab-3-content-2', aria-expanded='false', aria-controls='accordion-tab-3-content-2').collapsed
+							span Как обеспечить безопасность своего кабинета?
+					#accordion-tab-3-content-2.collapse(aria-labelledby='accordion-tab-3-heading-2', data-parent='#accordion-tab-3')
+						.card-body
+							p При выводе или переводе денежных средств потребуется «Транзакционный пароль», который указан при регистрации.

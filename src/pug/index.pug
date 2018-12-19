@@ -1,0 +1,627 @@
+extends layouts/_home.pug
+
+block head-meta
+	+head-meta(
+	'VerumTrade', 
+	'VerumTrade', 
+	'http://verumtrade.com'
+	)
+
+block extra-js
+	script(src="js/feedback-modal.js")
+	script(src="js/investor-modal.js")
+	script(src="js/infinite-decoration.js")
+
+block feedback-modal
+	include includes/_feedback-modal
+
+block investor-modal
+	include includes/_investor-modal
+
+block main-content
+	.home-page
+		.first-screen-block
+			.fixed-width-wrapper
+				.container
+					h1.banner-headline.toTopAnimated#first Зарабатывайте до 25% в месяц 
+						br
+						| с ежедневными выплатами 
+						br
+						| на Visa/Mastercard
+					p.banner-text.toTopAnimated#second С командой ТОП-1 криптоаналитика по версии TradingView
+					a(href="javascript:void(0);").custom-btn.toTopAnimated#third
+						span Подробнее
+						svg#button(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 36.1 25.8', enable-background='new 0 0 36.1 25.8', xml:space='preserve')
+							g
+								polyline(fill='none', stroke='#FFFFFF', stroke-width='3', stroke-miterlimit='10', points='22.2,1.1 34,12.9 22.2,24.7')
+					img.phone.toTopAnimated#nineth(src="./images/phone.png")
+					#scrollBottom.toTopAnimated
+						img(src="./images/move-to-next-screen.png", alt="Move to next screen")
+						span Scroll down
+				.right-side-content
+					img.gradient.fadeInAnimated#fourth(src="./images/gradient.png")
+					img.gradient.gradient-min.fadeInAnimated#fourth(src="./images/gradient-min.png")
+					.img-wrap
+						img(src="./images/usd-1.png", alt="usd").dollar-img.dollar-img-1.fadeInAnimated#fifth
+						img(src="./images/usd-2.png", alt="usd").dollar-img.dollar-img-2.fadeInAnimated#sixth
+						img(src="./images/usd-3.png", alt="usd").dollar-img.dollar-img-3.fadeInAnimated#seventh
+						img(src="./images/usd-4.png", alt="usd").dollar-img.dollar-img-4.fadeInAnimated#eighth
+		.second-block
+			.container
+				.flex-block
+					.flex-item.flex-item-1
+						include svg/_growth
+						.item-title ТОП-1 аналитик
+						.item-subtitle на TradingView
+						.hidden-content 5 лет опыта в трейдинге. Основатель аналитической компании Excavo Family, управляющей активами VerumTrade
+					.flex-item.flex-item-2
+						include svg/_profit
+						.item-title Собственная биржа
+						.item-subtitle и криптовалюта
+						.hidden-content Целью является обеспечение быстрых и безопасных платежей среди всех пользователей системы
+					.flex-item.flex-item-3
+						include svg/_debit-card
+						.item-title Ввод и вывод денег
+						.item-subtitle Visa/Mastercard
+						.hidden-content Выплаты производятся ежедневно на visa/mastercard. Вы также можете совершать финансовые операции в криптовалюте
+					.flex-item.flex-item-4
+						include svg/_document
+						.item-title Юридический договор
+						.item-subtitle с инвестором
+						.hidden-content Юридический договор свыше 5000$. Данную возможность необходимо обсудить с тех. поддержкой или пригласившим Вас партнером
+		.company-page.company-page-hp-top#scrollToBlock
+			.first-block
+				.container
+					.row
+						.col-lg-6.col-md-12
+							h6.pre-headline О компании
+							h2.page-headline Международная 
+								|
+								br
+								| инвестиционная 
+								br
+								| компания VerumTrade
+							p Мы предлагаем более 5 решений для инвестиций
+								|
+								br
+								| от 10 до 50.000$, которые подойдут не только 
+								br
+								| опытным предпринимателям, но и студентам. 
+								br
+								| Собственная криптовалюта, онлайн-биржа и 3 года 
+								br
+								| успешной работы на конкурентном рынке.
+							.btn-row
+								+button-name("Подробнее")
+								a(href="./files/VerumTradeПрезентация.pdf", target="_blank").secondary-btn
+									span Скачать PDF
+									svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24')
+										path(fill='#3469f5' d='M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z')
+						.col-lg-6.col-md-12
+							a(href="https://www.youtube.com/watch?v=sYuRR2Ud9oI", target="_blank").pulse
+								// ?xml version="1.0" encoding="UTF-8" standalone="no"?
+								svg#svg2(xmlns:dc='http://purl.org/dc/elements/1.1/', xmlns:cc='http://creativecommons.org/ns#', xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#', xmlns:svg='http://www.w3.org/2000/svg', xmlns='http://www.w3.org/2000/svg', version='1.1', viewBox='0 0 480 480', height='480', width='480')
+									metadata#metadata10
+										rdf:rdf
+											cc:work(rdf:about='')
+												dc:format image/svg+xml
+												dc:type(rdf:resource='http://purl.org/dc/dcmitype/StillImage')
+												dc:title
+									defs#defs8
+									path#path4(fill='#ffffff' d='M 190,340 290,240 190,140 Z')
+							img(src="./images/about-us.png", alt="About us", style="width: 514px; height: 515px;")
+		.third-block#scrollToBlock1
+			.container
+				h6.pre-headline.ta-c Сделайте правильный выбор
+				h1.page-headline.ta-c Какие риски несут популярные 
+					br
+					| способы инвестирования
+				.flex-block
+					.flex-item.flex-item-1
+						.info-img
+							img(src="./images/light-red-segment.png", alt="")
+							i.zmdi.zmdi-close
+						img(src="./images/investment-1.png", alt="").desc-img
+						.item-title Инвестировать 
+							br
+							| самостоятельно
+						.item-content Высокие риски, 
+							br
+							| потеря времени 
+							br
+							| и необходимость 
+							br
+							| экспертности
+					.flex-item.flex-item-2
+						.info-img
+							img(src="./images/light-red-segment.png", alt="")
+							i.zmdi.zmdi-close
+						img(src="./images/investment-2.png", alt="").desc-img
+						.item-title Традиционный 
+							br
+							| банк
+						.item-content Низкий процент 
+							br
+							| и лишние вопросы 
+							br
+							| по поводу 
+							br
+							| происхождения 
+							br
+							| капитала
+					.flex-item.flex-item-3
+						.info-img
+							img(src="./images/light-red-segment.png", alt="")
+							i.zmdi.zmdi-close
+						img(src="./images/investment-3.png", alt="").desc-img
+						.item-title Обычные 
+							br
+							| трейдеры
+						.item-content Высокие риски, 
+							br
+							| отсутствие гарантий 
+							br
+							| и проблема 
+							br
+							| с обналичиванием 
+							br
+							| дохода
+					.flex-item.flex-item-4
+						.info-img
+							img(src="./images/light-green-segment.png", alt="")
+							i.zmdi.zmdi-check
+						img(src="./images/investment-4.png", alt="").desc-img
+						.item-title Компания 
+							br
+							| VerumTrade
+						.item-content Аналитики с мировым 
+							br
+							| именем, страхование 
+							br
+							| инвестиций. Ввод и 
+							br
+							| вывод средств через 
+							br
+							| visa / mastercard / 
+							br
+							| криптовалюты
+		.fourth-block
+			h6.pre-headline.ta-c Преимущества
+			h1.page-headline.ta-c Преимущества работы 
+				br
+				| с VerumTrade
+			.container
+				.wrapper
+					.left-side
+						.advantage.advantage-1 Доход до 25% в месяц 
+							br
+							| и до 300% в год
+						.advantage.advantage-2 Минимальные 
+							br
+							| инвестиции от 10$
+						.advantage.advantage-3 3 года успешной работы 
+							br
+							| и более 1000 довольных 
+							br
+							| клиентов
+					.right-side
+						.advantage.advantage-4 Официальная регистрация 
+							br
+							| в США и Евросоюзе
+						.advantage.advantage-5 Ежедневный вывод 
+							br
+							| заработанных средств
+						.advantage.advantage-6 Собственная биржа 
+							br
+							| и криптовалюта 
+							br
+							| Verumcoin
+				a(href="javascript:void(0);").custom-btn#investorModalTrigger1
+					span Стать инвестором
+					svg#button(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 36.1 25.8', enable-background='new 0 0 36.1 25.8', xml:space='preserve')
+						g
+							polyline(fill='none', stroke='#FFFFFF', stroke-width='3', stroke-miterlimit='10', points='22.2,1.1 34,12.9 22.2,24.7')
+		.fifth-block
+			.container
+				h6.pre-headline.ta-c Целевая аудитория
+				h1.page-headline.ta-c Кто является нашими 
+					br
+					| инвесторами
+				.investor-block
+					.table-head
+						.investor-type-head Кто
+						.opportunities-type-head Возможности
+					.table-body-item.table-body-item-1
+						.number-img
+							img(src="./images/light-blue-segment.png", alt="")
+							span 1
+						.investor-type-body Крупные инвесторы, 
+							br
+							| предприниматели
+						.opportunities-type-body Увеличение прибыли и диверсификации активов. 
+							br
+							| VerumTrade - это возможность инвестировать в 
+							br
+							| новые технологии, без необходимости постоянно 
+							br
+							| следить за трендами и рынком.
+						.graphic-content
+							img(src="./images/business.png", alt="")
+					.table-body-item.table-body-item-2
+						.number-img
+							img(src="./images/light-blue-segment.png", alt="")
+							span 2
+						.investor-type-body Средний класс
+						.opportunities-type-body Возможность увеличить финансовое состояние, 
+							br
+							| не меняя основного места работы.
+							br
+							span Единожды инвестировав в VerumTrade, 
+								br
+								| Вы можете ежемесячно выплачивать лизинг 
+								br
+								| за новый автомобиль любого класса.
+						.graphic-content
+							img(src="./images/middle-class.png", alt="")
+					.table-body-item.table-body-item-3
+						.number-img
+							img(src="./images/light-blue-segment.png", alt="")
+							span 3
+						.investor-type-body Студенты
+						.opportunities-type-body Начните свой первый бизнес с надежной 
+							br
+							| компанией. Минимальная инвестиция равна 
+							br
+							| всего лишь трем чашкам кофе.
+						.graphic-content
+							img(src="./images/students.png", alt="")
+		.sixth-block
+			.container
+				h6.pre-headline.ta-c Калькулятор дохода
+				h1.page-headline.ta-c Сколько можно зарабатывать 
+					br
+					| с VerumTrade
+				.row
+					.col-xl-8.col-lg-12
+						.calc-tab-wrapper
+							.header-block
+								ul.nav.nav-tabs
+									li.nav-item
+										a.nav-link.active(href='#monthly-amount', data-toggle='tab') Ежемесячная выплата
+									li.nav-item
+										a.nav-link(href='#daily-amount', data-toggle='tab') Ежедневная выплата
+							.tab-content
+								.tab-pane.container.active#monthly-amount
+									.monthly-calc-wrapper
+										form.calculator.monthly-calculator
+											.monthly-calculator-row
+												label(for='monthly-calculator-amount-val') Какую сумму вы хотите инвестировать
+												input#monthly-calculator-amount-val.monthly-calculator-amount-val(type='text', value='', placeholder='0', onchange='document.getElementById("monthly-calculator-range").value=this.value', onkeypress="return event.keyCode != 13;")
+											.monthly-calculator-row
+												input#monthly-calculator-range.monthly-calculator-range(type='range', min='10', max='50000', value='0', step='1', required='', onchange='document.getElementById("monthly-calculator-amount-val").value=this.value')
+											.monthly-calculator-row
+												span.nums 0
+												span.nums 10 000
+												span.nums 20 000
+												span.nums 30 000
+												span.nums 40 000
+												span.nums 50 000
+											.monthly-calculator-row
+												.monthly-calculator-forecast-month-wrapper
+													span.monthly-calculator-forecast-month
+												.monthly-calculator-info Прогнозированный процент в месяц
+													span  *
+												.monthly-calculator-forecast-year-wrapper
+													span.calculator-forecast-year 125%
+												.monthly-calculator-info Прогнозированный процент за год
+													span  *
+											.monthly-calculator-row
+												.monthly-calculator-result-month-wrapper
+													span.monthly-calculator-result-month
+												.monthly-calculator-info Прогнозированный заработок в месяц
+													span  *
+												.monthly-calculator-result-year-wrapper
+													span.monthly-calculator-result-year
+												.monthly-calculator-info Прогнозированный заработок за год
+													span  *
+								.tab-pane.container.fade#daily-amount
+									.daily-calc-wrapper
+										form.calculator.daily-calculator
+											.daily-calculator-row
+												label(for='daily-calculator-amount-val') Какую сумму вы хотите инвестировать
+												input#daily-calculator-amount-val.daily-calculator-amount-val(type='text', value='', placeholder='0', onchange='document.getElementById("daily-calculator-range").value=this.value', onkeypress="return event.keyCode != 13;")
+											.daily-calculator-row
+												input#daily-calculator-range.daily-calculator-range(type='range', min='10', max='50000', value='0', step='1', required='', onchange='document.getElementById("daily-calculator-amount-val").value=this.value')
+											.monthly-calculator-row
+												span.nums 0
+												span.nums 10 000
+												span.nums 20 000
+												span.nums 30 000
+												span.nums 40 000
+												span.nums 50 000
+											.daily-calculator-row
+												.daily-calculator-forecast-day-wrapper
+													span.daily-calculator-forecast-day 8%
+												.daily-calculator-info Прогнозированный процент в день
+													span  *
+												.daily-calculator-forecast-month-wrapper
+													span.daily-calculator-forecast-month 16%
+												.daily-calculator-info Прогнозированный процент в месяц
+													span  *
+											.daily-calculator-row
+												.daily-calculator-result-day-wrapper
+													span.daily-calculator-result-day
+												.daily-calculator-info Прогнозированный заработок в день
+													span  *
+												.daily-calculator-result-month-wrapper
+													span.daily-calculator-result-month
+												.daily-calculator-info Прогнозированный заработок в месяц
+													span  *
+							.footer-block
+								p Процентная ставка может варьироваться от 16% до 21% в месяц
+					.col-xl-4.col-lg-12
+						.form-wrapper
+							form.form
+								h3 Станьте успешным инвестором VerumTrade
+								p Оставьте заявку в форме ниже 
+									br
+									| и получите доступ на почту
+								.form-group
+									input(type='text', name='name', placeholder='Введите ваше имя', required)
+								.form-group
+									input(type='email', name='email', placeholder='Введите ваш email', required)
+								.form-group
+									input(type='text', name='phone', placeholder='Введите ваш телефон')
+								+submit-name('Стать инвестором')
+		.seventh-block
+			.container
+				.row
+					.col-xl-7.col-lg-12
+						h6.pre-headline Грамотный финансовый менеджмент
+						h1.page-headline Распределение денежных 
+							br
+							| средств компании
+					.col-xl-5.col-lg-12
+						p В качестве диверсификации рисков, 
+							br
+							| денежные средства компании распределяются 
+							br
+							| на 4 основных  направления
+				.row
+					.flex-block
+						.flex-item.flex-item-1
+							.item-num 50%
+							.item-img
+								img(src="./images/item-1.png", alt="")
+							.item-title Краткосрочный и 
+								br
+								| долгосрочный трейдинг
+							.item-content Управление профессиональной 
+								br
+								| командой трейдеров во главе с 
+								br
+								|
+								a(href="javascript:void(0);").default-tooltip#default-tooltip EXCAVO 
+									span.tooltip-wave
+										span  
+								|  - ТОП-1 криптоаналитик 
+								br
+								| в мире по версии TradingView.
+						.flex-item.flex-item-2
+							.item-num 20%
+							.item-img
+								img(src="./images/item-2.png", alt="")
+							.item-title Увеличение мощности 
+								br
+								| майнинг оборудования
+							.item-content Майнинг позволяет 
+								br
+								| диверсифицировать риски 
+								br
+								| и обеспечивает стабильный 
+								br
+								| доход компании.
+						.flex-item.flex-item-3
+							.item-num 20%
+							.item-img
+								img(src="./images/item-2.png", alt="")
+							.item-title Кредитирование под 
+								br
+								| залог криптовалюты
+							.item-content Кредитирование под залог 
+								br
+								| криптовалюты или других 
+								br
+								| активов под 1-1,5% в день.
+						.flex-item.flex-item-4
+							.item-num 10%
+							.item-img
+								img(src="./images/item-3.png", alt="")
+							.item-title Резерв для 
+								br
+								| перспективных 
+								br
+								| направлений
+							.item-content VerumTrade имеет резерв 
+								br
+								| денежных средств для 
+								br
+								| перспективных ICO проектов 
+								br
+								| и реализации собственных 
+								br
+								| новых продуктов.
+		.marketing-page
+			.container
+				.row.first-block
+					.col-lg-3.col-md-6.referral-table-wrap
+						table.referral-table
+							thead.blue-thead
+								tr
+									th Реферальная линия
+							tbody
+								tr
+									td
+										span 1 линия
+								tr
+									td
+										span 2 линия
+								tr
+									td
+										span 3 линия
+								tr
+									td
+										span 4 линия
+								tr
+									td
+										span 5 линия
+								tr
+									td
+										span 6 линия
+								tr
+									td
+										span 7 линия
+								tr
+									td
+										span 8 линия
+					.col-lg-3.col-md-6.percent-table-wrap
+						table.percent-table
+							thead.green-thead
+								tr
+									th Процент от партнера
+							tbody
+								tr
+									td
+										span 7%
+								tr
+									td
+										span 4%
+								tr
+									td
+										span 2%
+								tr
+									td
+										span 1%
+								tr
+									td
+										span 1%
+								tr
+									td
+										span 1%
+								tr
+									td
+										span 1%
+								tr
+									td
+										span 1%
+					.col-lg-6.col-md-12
+						.content-wrapper
+							h6.pre-headline Комиссионные компании
+							h2.page-headline Комиссионные 
+								|
+								br
+								| за привлечение 
+								|
+								br
+								| новых инвесторов
+							p Компания выплачивает вам определенный 
+								br
+								| % за продажу продукта (инвестиционного портфеля VerumTrade). 
+							p Каждый раз, когда по вашей рекомендации (реферальной ссылке вашего кабинета) покупается инвестпортфель VerumTrade, 
+								br
+								| вам начисляется %.
+							a(href="javascript:void(0);").custom-btn#investorModalTrigger2
+								span Стать инвестором
+								svg#button(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 36.1 25.8', enable-background='new 0 0 36.1 25.8', xml:space='preserve')
+									g
+										polyline(fill='none', stroke='#FFFFFF', stroke-width='3', stroke-miterlimit='10', points='22.2,1.1 34,12.9 22.2,24.7')
+							a(href="marketing.html").secondary-btn
+								span Ранги и премии
+								svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24')
+									path(fill="#3469f5" d='M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z')
+				.row.third-block
+					.col-lg-6.col-md-12
+						h6.pre-headline Вывод денег
+						h2.page-headline Ввод и вывод 
+							|
+							br
+							| денег через системы 
+							br
+							| Visa/Mastercard
+						p Наличие Visa/Mastercard в качестве систем оплаты 
+							br
+							| и вывода средств еще раз доказывает, что компания 
+							br
+							| ведет легальную деятельность и нацелена 
+							br
+							| на долгосрочное развитие.
+						p Помимо традиционных и удобных для большинства 
+							br
+							| клиентов ввода и вывода денежных средств, мы 
+							br
+							| также предлагаем проводить финансовые операции 
+							br
+							| в криптовалюте.
+					.col-lg-6.col-md-12
+						img(src="./images/credit-card.png", alt="credit card", style="width: 525px; height: 501px;")
+		.company-page.company-page-hp-middle
+			.second-block
+				.container
+					.row
+						.col-xl-9.col-lg-12
+							h6.pre-headline Как развивалась компания на протяжении 3-х лет
+							h2.page-headline Три года стабильной работы и более 
+								|
+								br
+								| 1 млн. выплаченных дивидендов
+						.col-xl-3.col-lg-12.d-none.d-xl-block
+							+button-name('Подробнее')
+					.timeline-block
+						img(src="./images/timeline.png", alt="timeline")
+						.timeline-description-block
+							.item.item-1
+								h2.num 2015
+								h3.title Первые трейдеры
+								p.content Весной 2015 года в компании появились первые трейдеры, которые занимались 
+									br
+									| продажей криптовалют.
+							.item.item-2
+								h2.num 2016
+								h3.title Cоздание криптовалюты
+								p.content Компания анонсировала создание собственной криптовалюты VerumCoin
+							.item.item-3
+								h2.num 2017
+								h3.title Первые транзакции
+								p.content Первые транзакции монетами VerumCoin с собственным блокчейном
+							.item.item-4
+								h2.num 2018
+								h3.title Создание новых отделов
+								p.content Создание нового аналитического отдела который занимается изучением новых выгодных 
+									br
+									| ICO проектов
+		.company-page.company-page-hp-bottom
+			include includes/_company-snippet-2
+		.container
+			.faq-page
+				include includes/_faq-snippet
+		.eighth-block
+			.container
+				.row
+					.col-xl-9.col-lg-12
+						h6.pre-headline Стань инвестором
+						h1.page-headline Начни ежедневно 
+							br
+							| зарабатывать с VerumTrade
+						p 3 года успешной работы и тысячи довольных инвесторов
+					.col-xl-3.col-lg-12
+						a(href="javascript:void(0);").custom-btn#investorModalTrigger3
+							span Стать инвестором
+							svg#button(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 36.1 25.8', enable-background='new 0 0 36.1 25.8', xml:space='preserve')
+								g
+									polyline(fill='none', stroke='#FFFFFF', stroke-width='3', stroke-miterlimit='10', points='22.2,1.1 34,12.9 22.2,24.7')
+		.container
+			.feedback-block
+				h6.pre-headline Обратная связь
+				+feedback-block-headline("Остались вопросы?")
+				+feedback-block-content("Свяжитесь с нами через форму обратной связи")
+				+feedback-button("Задать вопрос")

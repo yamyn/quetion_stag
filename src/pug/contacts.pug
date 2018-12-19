@@ -1,0 +1,70 @@
+extends layouts/_inner.pug
+
+block head-meta
+	+head-meta(
+	'Контакты - VerumTrade', 
+	'Контакты - VerumTrade', 
+	'http://verumtrade.com/contacts.html'
+	)
+
+block extra-js
+	script.
+		const form = document.querySelector('.form');
+		const submitBttn = form.querySelector('#form-submit');
+		const requiredElems = Array.from(form.querySelectorAll('input[required], textarea'));
+		const opacityInterval = {from: 0, to: 1};
+
+		new Nearby(submitBttn, {
+			onProgress: (distance) => {
+				const o = lineEq(opacityInterval.from, opacityInterval.to, distanceThreshold.max, distanceThreshold.min, distance);
+
+				requiredElems.forEach((el) => {
+					const inputErrorEl = el.nextElementSibling;
+					if ( !el.value || el.type === 'email' && !validateEmail(el.value) ) {
+						TweenMax.to(inputErrorEl, .3, {
+							opacity: Math.max(o,opacityInterval.from)
+						});
+					}
+					else if ( el.value ) {
+						inputErrorEl.style.opacity = opacityInterval.from;
+					}
+				});
+			}
+		});
+
+block main-content
+	.contacts-page
+		.container
+			h6.pre-headline Контакты
+			h1.page-headline.ta-c Форма обратной связи
+			.flex-block
+				.flex-left
+					.contacts-wrapper
+						.contact-item
+							span Телефон
+							a(href="tel:+12248175916") +1(224) 817-59-16 
+						.contact-item
+							span WhatsApp
+							a(href="https://api.whatsapp.com/send?phone=12248175906") +1(224) 817-59-16 
+						.contact-item
+							span Telegram
+							a(href="tg://resolve?domain=VerumTrade1") +1(224) 817-59-16 
+				.flex-right
+					form.form
+						.form-row
+							.form-group.col-sm-6.col-xs-12
+								input(type="text", name="name", placeholder="Ваше имя", value="", required).form-control#your-name
+								.error-input(style="opacity: 0;")
+							.form-group.col-sm-6.col-xs-12
+								input(type="email", name="email", placeholder="Ваш email", value="", required).form-control#your-mail
+								.error-input(style="opacity: 0;")
+						.form-group
+							textarea(name="message", placeholder="Ваше сообщение", value="", required).form-control#your-message
+							.error-textarea(style="opacity: 0;")
+						button(type="submit", role="button").custom-btn#form-submit
+							span Задать вопрос
+							svg#submit(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 36.1 25.8', enable-background='new 0 0 36.1 25.8', xml:space='preserve')
+								g
+									polyline(fill='none', stroke='#FFFFFF', stroke-width='3', stroke-miterlimit='10', points='22.2,1.1 34,12.9 22.2,24.7')
+			.map-wrapper
+				img(src="images/map.png", alt="Map")

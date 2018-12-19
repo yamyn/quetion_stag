@@ -1,0 +1,20 @@
+#feedbackModal.modal.feedback-modal
+	.modal-content
+		.modal-header
+			h3.modal-title Остались вопросы?
+			p Оставьте свой вопрос в форме ниже и наш менеджер ответит вам 
+				br
+				| в ближайшее время
+			span.close#closefeedbackModal &times;
+		.modal-body
+			form.form
+				.row
+					.col
+						.form-row.default-row
+							input.textbox(type='text', name='name', placeholder="Введите ваше имя", required)
+						.form-row.default-row
+							input.textbox(type='email', name='email', placeholder="Введите ваш email", required)
+						.form-row.floating-row
+							textarea.textbox(name="answer", placeholder='Введите ваш вопрос')
+						.form-row.default-row
+							+submit-name('Задать вопрос')

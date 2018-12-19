@@ -1,0 +1,96 @@
+extends layouts/_inner.pug
+
+block head-meta
+	+head-meta(
+	'Компания - VerumTrade', 
+	'Компания - VerumTrade', 
+	'http://verumtrade.com/company.html'
+	)
+
+block extra-js
+	script(src="js/feedback-modal.js")
+
+block feedback-modal
+	include includes/_feedback-modal
+
+block main-content
+	.company-page
+		include includes/_company-snippet-3
+		include includes/_company-snippet-1
+		include includes/_company-snippet-2
+		.fourth-block
+			.container
+				.row
+					.col-xl-8.col-lg-12
+						h6.pre-headline Цель VerumTrade
+						h2.page-headline Цель компании - построение 
+							|
+							br 
+							| глобальной сети держателей 
+							br
+							| монет
+						.flex-block
+							.flex-item
+								p Популяризация собственной 
+									br
+									| валюты и собственной биржи, 
+									br
+									| партнерство с другими 
+									br
+									| глобальными площадками 
+									br
+									| и взаимодействие с рынком 
+									br
+									| коммерции.
+							.flex-item
+								p Все средства 
+									br
+									| инвестора распределяются 
+									br
+									| в разные направления, 
+									br
+									| где приносят краткосрочную 
+									br
+									| или долгосрочную 
+									br
+									| прибыль.
+							.flex-item
+								p Для скорейшего достижения 
+									br
+									| поставленных целей, компания 
+									br
+									| внедрила многоуровненвый 
+									br
+									| маркетинг.
+							.flex-item
+								p Сама прибыль варьируется от 
+									br
+									| успешности сделок компании 
+									br
+									| в течение отведенного 
+									br
+									| периода.
+					.col-xl-4.col-lg-12
+						.form-wrapper
+							form.form
+								h3 Хотите стать инвестором VerumTrade?
+								p Оставьте заявку в форме ниже 
+									br
+									| и получите доступ на почту
+								.form-group
+									input(type='text', name='name', placeholder='Введите ваше имя', required)
+								.form-group
+									input(type='email', name='email', placeholder='Введите ваш email', required)
+								.form-group
+									input(type='text', name='phone', placeholder='Введите ваш телефон')
+								+submit-name('Стать инвестором')
+		.faq-page
+			.container
+				include includes/_faq-snippet
+		.sixth-block
+			.container
+				.feedback-block
+					h6.pre-headline Обратная связь
+					+feedback-block-headline("Остались вопросы?")
+					+feedback-block-content("Свяжитесь с нами через форму обратной связи")
+					+feedback-button("Задать вопрос")

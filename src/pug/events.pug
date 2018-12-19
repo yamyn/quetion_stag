@@ -1,0 +1,197 @@
+extends layouts/_inner.pug
+
+block head-meta
+	+head-meta(
+	'События - VerumTrade', 
+	'События - VerumTrade', 
+	'https://verumtrade.com/events.html'
+	)
+
+block main-content
+	.events-page
+		.container
+			h6.pre-headline Инфоцентр
+			h1.page-headline.ta-c События VerumTrade
+			.event-item
+				.photo-block
+					img(src="images/event-photo.png", alt="Event photo")
+				.info-block
+					.line-1
+						span.event-type Конференция
+						span.is-free Вход свободный
+					.line-2
+						.date
+							i.zmdi.zmdi-calendar-note
+							span 28.04.2018
+						.time
+							i.zmdi.zmdi-time
+							span 16:00
+					.line-3
+						.headline Большое событие для больших людей
+					.line-4
+						.address
+							i.zmdi.zmdi-pin
+							span Киев. Отель Tien Shan, ул.Богенбай Батыра 115
+					.line-5
+						a(href="#lightbox1", data-toggle="modal").photo-btn
+							i.zmdi.zmdi-camera
+							span Фотографии
+						a(href="#lightbox2", data-toggle="modal").video-btn
+							i.zmdi.zmdi-videocam
+							span Видеоотчет
+			.event-item
+				.photo-block
+					img(src="images/event-photo.png", alt="Event photo")
+				.info-block
+					.line-1
+						span.event-type Конференция
+						span.is-free Вход свободный
+					.line-2
+						.date
+							i.zmdi.zmdi-calendar-note
+							span 28.04.2018
+						.time
+							i.zmdi.zmdi-time
+							span 16:00
+					.line-3
+						.headline Большое событие для больших людей
+					.line-4
+						.address
+							i.zmdi.zmdi-pin
+							span Киев. Отель Tien Shan, ул.Богенбай Батыра 115
+					.line-5
+						a(href="#lightbox3", data-toggle="modal").photo-btn
+							i.zmdi.zmdi-camera
+							span Фотографии
+						a(href="#lightbox4", data-toggle="modal").video-btn
+							i.zmdi.zmdi-videocam
+							span Видеоотчет
+			.event-item
+				.photo-block
+					img(src="images/event-photo.png", alt="Event photo")
+				.info-block
+					.line-1
+						span.event-type Конференция
+						span.is-free Вход свободный
+					.line-2
+						.date
+							i.zmdi.zmdi-calendar-note
+							span 28.04.2018
+						.time
+							i.zmdi.zmdi-time
+							span 16:00
+					.line-3
+						.headline Большое событие для больших людей
+					.line-4
+						.address
+							i.zmdi.zmdi-pin
+							span Киев. Отель Tien Shan, ул.Богенбай Батыра 115
+					.line-5
+						a(href="#lightbox5", data-toggle="modal").photo-btn
+							i.zmdi.zmdi-camera
+							span Фотографии
+						a(href="#lightbox6", data-toggle="modal").video-btn
+							i.zmdi.zmdi-videocam
+							span Видеоотчет
+		#lightbox1.modal.fade.photo-video-modal
+			.modal-dialog.window
+				button.close-modal(type="button", data-dismiss="modal", aria-label="Close")
+					span(aria-hidden="true") &times;
+				.modal-content
+					#carousel1.carousel.slide(data-ride='carousel')
+						.carousel-inner
+							.carousel-item.active
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=1', alt='...')
+							.carousel-item
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=2', alt='...')
+							.carousel-item
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=3', alt='...')
+						a.carousel-control-prev(href='#carousel1', role='button', data-slide='prev')
+							span.zmdi.zmdi-chevron-left
+						a.carousel-control-next(href='#carousel1', role='button', data-slide='next')
+							span.zmdi.zmdi-chevron-right
+		#lightbox2.modal.fade.photo-video-modal
+			.modal-dialog.window
+				button.close-modal(type="button", data-dismiss="modal", aria-label="Close")
+					span(aria-hidden="true") &times;
+				.modal-content
+					#carousel2.carousel.slide(data-ride='carousel')
+						.carousel-inner
+							.carousel-item.active
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=4', alt='...')
+							.carousel-item
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=5', alt='...')
+							.carousel-item
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=6', alt='...')
+						a.carousel-control-prev(href='#carousel2', role='button', data-slide='prev')
+							span.zmdi.zmdi-chevron-left
+						a.carousel-control-next(href='#carousel2', role='button', data-slide='next')
+							span.zmdi.zmdi-chevron-right
+		#lightbox3.modal.fade.photo-video-modal
+			.modal-dialog.window
+				button.close-modal(type="button", data-dismiss="modal", aria-label="Close")
+					span(aria-hidden="true") &times;
+				.modal-content
+					#carousel3.carousel.slide(data-ride='carousel')
+						.carousel-inner
+							.carousel-item.active
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=7', alt='...')
+							.carousel-item
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=8', alt='...')
+							.carousel-item
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=9', alt='...')
+						a.carousel-control-prev(href='#carousel3', role='button', data-slide='prev')
+							span.zmdi.zmdi-chevron-left
+						a.carousel-control-next(href='#carousel3', role='button', data-slide='next')
+							span.zmdi.zmdi-chevron-right
+		#lightbox4.modal.fade.photo-video-modal
+			.modal-dialog.window
+				button.close-modal(type="button", data-dismiss="modal", aria-label="Close")
+					span(aria-hidden="true") &times;
+				.modal-content
+					#carousel4.carousel.slide(data-ride='carousel')
+						.carousel-inner
+							.carousel-item.active
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=10', alt='...')
+							.carousel-item
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=11', alt='...')
+							.carousel-item
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=12', alt='...')
+						a.carousel-control-prev(href='#carousel4', role='button', data-slide='prev')
+							span.zmdi.zmdi-chevron-left
+						a.carousel-control-next(href='#carousel4', role='button', data-slide='next')
+							span.zmdi.zmdi-chevron-right
+		#lightbox5.modal.fade.photo-video-modal
+			.modal-dialog.window
+				button.close-modal(type="button", data-dismiss="modal", aria-label="Close")
+					span(aria-hidden="true") &times;
+				.modal-content
+					#carousel5.carousel.slide(data-ride='carousel')
+						.carousel-inner
+							.carousel-item.active
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=13', alt='...')
+							.carousel-item
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=14', alt='...')
+							.carousel-item
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=15', alt='...')
+						a.carousel-control-prev(href='#carousel5', role='button', data-slide='prev')
+							span.zmdi.zmdi-chevron-left
+						a.carousel-control-next(href='#carousel5', role='button', data-slide='next')
+							span.zmdi.zmdi-chevron-right
+		#lightbox6.modal.fade.photo-video-modal
+			.modal-dialog.window
+				button.close-modal(type="button", data-dismiss="modal", aria-label="Close")
+					span(aria-hidden="true") &times;
+				.modal-content
+					#carousel6.carousel.slide(data-ride='carousel')
+						.carousel-inner
+							.carousel-item.active
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=16', alt='...')
+							.carousel-item
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=17', alt='...')
+							.carousel-item
+								img.img-responsive(src='http://placehold.it/673x376/eaeaea/000&text=18', alt='...')
+						a.carousel-control-prev(href='#carousel6', role='button', data-slide='prev')
+							span.zmdi.zmdi-chevron-left
+						a.carousel-control-next(href='#carousel6', role='button', data-slide='next')
+							span.zmdi.zmdi-chevron-right

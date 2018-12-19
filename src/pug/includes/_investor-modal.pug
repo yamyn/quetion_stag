@@ -1,0 +1,18 @@
+#investorModal.modal.investor-modal
+	.modal-content
+		.modal-header
+			h3.modal-title Хотите стать инвестором Verum Trade?
+			p Оставьте заявку в форме ниже
+				br
+				| и получите доступ на почту
+			span.close#closeinvestorModal &times;
+		.modal-body
+			.form-wrapper
+				form.form
+					.form-group
+						input(type='text', name='name', placeholder='Введите ваше имя', required)
+					.form-group
+						input(type='email', name='email', placeholder='Введите ваш email', required)
+					.form-group
+						input(type='text', name='phone', placeholder='Введите ваш телефон')
+					+submit-name('Стать инвестором')

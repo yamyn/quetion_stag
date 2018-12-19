@@ -1,0 +1,98 @@
+/**
+	Style Sheet for Verum Trade website project
+	version: 1.0
+	created: 27.11.2018
+	author: Serhii Tiutin
+	website: https://verumtrade.com
+	*/
+
+@import "vars"
+@import "buttons"
+
+@keyframes unfoldIn 
+	0%
+		transform: scaleY(.005) scaleX(0)
+	50%
+		transform: scaleY(.005) scaleX(1)
+	100%
+		transform: scaleY(1) scaleX(1)
+
+
+@keyframes unfoldOut
+	0%
+		transform: scaleY(1) scaleX(1)
+	50%
+		transform: scaleY(.005) scaleX(1)
+	100%
+		transform: scaleY(.005) scaleX(0)
+
+@keyframes zoomIn
+	0%
+		transform: scale(0)
+	100%
+		transform: scale(1)
+
+.photo-video-modal
+	background-color: $violet-color
+	transform: scaleY(.01) scaleX(0)
+	animation: unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
+	.window
+		width: 100%
+		max-width: 792px
+		height: 495px
+		border-radius: 5px
+		box-shadow: 0px 10px 80px rgba(40,62,102,0.1)
+		background-color: $white-color
+		padding: 58px
+		position: relative
+		margin-top: 50px
+		opacity: 0.9
+		.close-modal
+			position: absolute
+			float: right
+			font-weight: 700
+			transition: all 500ms
+			padding: 0
+			opacity: 1
+			font-size: 20px
+			background-image: linear-gradient(90deg, $accent-blue-color 0%, $lighter-blue-color 100%)
+			color: $white-color
+			border-radius: 5px
+			top: 0px
+			right: 0px
+			height: 38px
+			width: 38px
+			text-align: center
+			line-height: 38px
+			border: none
+			cursor: pointer
+			span
+				position: relative
+				top: -3px
+				cursor: pointer
+			&:active,
+			&:focus
+				outline: none
+		.modal-content
+			border: 0
+			.carousel-control-next,
+			.carousel-control-prev
+				width: 45px
+				height: 45px
+				border-radius: 5px
+				background-image: linear-gradient(90deg, #3469f5 0%, #4c85f4 100%)
+				transition: all 500ms
+				transform: translateY(-50%)
+				top: 50%
+				opacity: 1
+				&:hover
+					opacity: 0.9
+				&:focus
+					outline: none
+					border: 0
+					text-decoration: none
+			.carousel-control-next
+				right: -82px
+			.carousel-control-prev
+				left: -82px
+				

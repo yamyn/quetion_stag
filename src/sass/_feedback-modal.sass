@@ -1,0 +1,174 @@
+/**
+	Style Sheet for Verum Trade website project
+	version: 1.0
+	created: 12.11.2018
+	author: Serhii Tiutin
+	website: https://verumtrade.com
+	*/
+
+@import "vars"
+@import "buttons"
+
+/**
+	Modal animation
+	*/
+
+@keyframes unfoldIn 
+	0%
+		transform: scaleY(.005) scaleX(0)
+	50%
+		transform: scaleY(.005) scaleX(1)
+	100%
+		transform: scaleY(1) scaleX(1)
+
+
+@keyframes unfoldOut
+	0%
+		transform: scaleY(1) scaleX(1)
+	50%
+		transform: scaleY(.005) scaleX(1)
+	100%
+		transform: scaleY(.005) scaleX(0)
+
+@keyframes zoomIn
+	0%
+		transform: scale(0)
+	100%
+		transform: scale(1)
+
+/**
+	Modal styles
+	*/
+
+.modal.feedback-modal
+	display: none
+	position: fixed
+	z-index: 889
+	padding-top: 50px
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	overflow: auto
+	background-color: $violet-color
+	opacity: 0.9
+	&.in
+		transform: scaleY(.01) scaleX(0)
+		animation: unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
+	.modal-content
+		position: relative
+		background-color: $white-color
+		margin: auto
+		padding: 50px
+		border: 1px solid $white-color
+		border-radius: 5px
+		width: 100%
+		max-width: 770px
+		z-index: 888
+		transition: all 1000ms
+		transform: scale(0)
+		animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
+		.modal-header
+			padding: 0
+			border: none
+			position: relative
+			flex-direction: column
+			h3
+				font-size: 24px
+				line-height: 28px
+				color: $light-black-color
+				font-family: $bold-font
+				display: block
+				text-align: center
+				margin: 0 auto 20px
+			p
+				font-size: 18px
+				line-height: 25px
+				color: $dark-gray-color
+				font-family: $regular-font
+				display: block
+				text-align: center
+				margin: 0 auto 10px
+			.close
+				position: absolute
+				float: right
+				font-weight: 700
+				transition: all 500ms
+				padding: 0
+				opacity: 1
+				font-size: 25px
+				background-image: linear-gradient(90deg, $accent-blue-color 0%, $lighter-blue-color 100%)
+				color: $white-color
+				border-radius: 5px
+				top: -35px
+				right: -35px
+				height: 45px
+				width: 45px
+				text-align: center
+				line-height: 37px
+				&:active,
+				&:focus
+					outline: none
+		.modal-body
+			padding: 0
+			.form-row
+				margin-top: 20px
+				margin-bottom: 0px
+				position: relative
+				.form-label
+					display: block
+					position: absolute
+					top: 17px
+					left: 20px
+					color: $dim-gray-color
+					cursor: text
+					transition: all 500ms ease-in-out 0s
+					margin-bottom: 0
+				.textbox
+					width: 100%
+					box-shadow: 0 3px 5px 0 rgba(205,214,227,0.17)
+					color: $dim-gray-color
+					font-size: 16px
+					font-family: $regular-font
+					padding: 0 25px
+					transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+					line-height: 55px
+					border-radius: 5px
+					background-color: $white-color
+					border: 1px solid #e3e3e3
+					&:focus,
+					&:active
+						outline: none	
+					&:focus
+						border-color: #80bdff
+						box-shadow: 0px 10px 80px rgba(0,0,0,0.1)
+						~ .form-label
+							top: -1.5em
+							left: 0
+							font-size: .8em
+							color: inherit
+							cursor: pointer
+				textarea.textbox
+					line-height: 22px
+					padding: 25px
+					height: 210px
+				.custom-btn
+					max-width: 325px
+			.default-row
+				width: 100%
+				max-width: 325px
+			.floating-row
+				float: right
+				width: 100%
+				max-width: 325px
+				margin-top: -135px
+
+@media screen and (max-width: 823px)
+	.modal.feedback-modal
+		.modal-content
+			.modal-body
+				.floating-row
+					float: none
+					margin: 20px auto 0
+				.default-row
+					margin: 20px auto 0

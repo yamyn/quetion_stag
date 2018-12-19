@@ -1,0 +1,24 @@
+extends layouts/_inner.pug
+
+block head-meta
+	+head-meta(
+	'Часто задаваемые вопросы - VerumTrade', 
+	'Часто задаваемые вопросы - VerumTrade', 
+	'https://verumtrade.com/faq.html'
+	)
+
+block extra-js
+	script(src="js/feedback-modal.js")
+
+block feedback-modal
+	include includes/_feedback-modal
+
+block main-content
+	.container
+		.faq-page
+			include includes/_faq-snippet
+			.feedback-block
+				h6.pre-headline Обратная связь
+				+feedback-block-headline("Не нашли ответа?")
+				+feedback-block-content("У вас остались вопросы? Не нашли ответа на свой вопрос?")
+				+feedback-button("Задать вопрос")
